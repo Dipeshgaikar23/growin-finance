@@ -18,10 +18,21 @@ export default function HeroSection() {
 
   return (
     <section
-      style={{ background: 'linear-gradient(135deg, #1B3F8B 0%, #2563EB 100%)' }}
-      className="min-h-[90vh] flex items-center py-16 px-4"
+      className="relative min-h-[90vh] flex items-center py-16 px-4 overflow-hidden"
+      style={{
+        backgroundImage: 'url(https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=1920&q=80)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
     >
-      <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      {/* Dark navy gradient overlay */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background: 'linear-gradient(135deg, rgba(27,63,139,0.96) 0%, rgba(37,99,235,0.88) 60%, rgba(37,99,235,0.75) 100%)',
+        }}
+      />
+      <div className="relative z-10 max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Left Column */}
         <div className="text-white">
           <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-2 text-sm font-medium mb-6">
