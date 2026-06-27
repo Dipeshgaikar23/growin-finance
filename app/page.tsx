@@ -1,4 +1,5 @@
 import HeroSection from '@/components/home/HeroSection';
+import BankLogosCarousel from '@/components/home/BankLogosCarousel';
 import StatsBar from '@/components/home/StatsBar';
 import LoanTypesGrid from '@/components/home/LoanTypesGrid';
 import HowItWorks from '@/components/home/HowItWorks';
@@ -11,6 +12,7 @@ export default function Home() {
   return (
     <>
       <HeroSection />
+      <BankLogosCarousel />
       <StatsBar />
       <LoanTypesGrid />
       <HowItWorks />
