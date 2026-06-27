@@ -1,5 +1,14 @@
+import Image from 'next/image'
 import Button from '@/components/ui/Button'
 import { LoanData } from '@/lib/data/loans'
+
+const loanImages: Record<string, string> = {
+  'home-loan': 'https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800&q=80',
+  'loan-against-property': 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80',
+  'personal-loan': 'https://images.unsplash.com/photo-1579621970588-a35d0e7ab9b6?w=800&q=80',
+  'business-loan': 'https://images.unsplash.com/photo-1664575602554-2087b04935a5?w=800&q=80',
+  'car-loan': 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&q=80',
+}
 
 interface LoanHeroProps {
   loan: LoanData
@@ -53,6 +62,18 @@ export default function LoanHero({ loan }: LoanHeroProps) {
 
           {/* Right Stats Card */}
           <div className="hidden lg:block">
+            {loanImages[loan.slug] && (
+              <div className="relative w-full h-48 rounded-2xl overflow-hidden mb-4 shadow-xl">
+                <Image
+                  src={loanImages[loan.slug]}
+                  alt={loan.name}
+                  fill
+                  className="object-cover"
+                  priority
+                />
+                <div className="absolute inset-0 bg-blue-900/20" />
+              </div>
+            )}
             <div className="bg-white rounded-2xl p-8 shadow-2xl">
               <h3 className="text-lg font-bold text-gray-800 mb-6 text-center">Loan at a Glance</h3>
               <div className="grid grid-cols-2 gap-6">

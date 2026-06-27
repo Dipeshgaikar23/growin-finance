@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { blogPosts } from '@/lib/data/blog';
 
 export const metadata: Metadata = {
@@ -50,6 +51,16 @@ export default function BlogPage() {
                   key={post.slug}
                   className="bg-white rounded-2xl shadow hover:shadow-lg hover:-translate-y-1 transition-all duration-200 overflow-hidden border border-gray-100 flex flex-col"
                 >
+                  {post.coverImage && (
+                    <div className="relative w-full h-48 overflow-hidden">
+                      <Image
+                        src={post.coverImage}
+                        alt={post.title}
+                        fill
+                        className="object-cover hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                  )}
                   <div className="p-6 flex flex-col flex-1">
                     {/* Category Badge */}
                     <span

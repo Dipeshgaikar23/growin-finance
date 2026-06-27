@@ -8,11 +8,22 @@ export interface BlogPost {
   content: string;
   author: string;
   tags: string[];
+  coverImage: string;
 }
+
+const BLOG_IMAGES: Record<string, string> = {
+  'how-to-get-home-loan-india': 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80',
+  'improve-cibil-score': 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=80',
+  'loan-against-property-guide': 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80',
+  'emi-calculator-tips': 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80',
+  'home-loan-tax-benefits': 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80',
+  'property-investment-mumbai': 'https://images.unsplash.com/photo-1529253355930-ddbe423a2ac7?w=800&q=80',
+};
 
 export const blogPosts: BlogPost[] = [
   {
     slug: 'how-to-get-home-loan-india',
+    coverImage: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80",
     title: 'How to Get a Home Loan in India: Complete Guide 2024',
     excerpt: 'A step-by-step guide covering eligibility, documents, interest rates, and tips to get your home loan approved quickly in India.',
     date: '2024-03-15',
@@ -56,6 +67,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'improve-cibil-score',
+    coverImage: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=80",
     title: '10 Proven Ways to Improve Your CIBIL Score Fast',
     excerpt: 'Your CIBIL score is the gateway to better loan deals. Discover 10 actionable strategies to boost your credit score and qualify for lower interest rates.',
     date: '2024-04-02',
@@ -102,6 +114,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'emi-calculation-guide',
+    coverImage: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80",
     title: 'EMI Calculation Guide: Everything You Need to Know',
     excerpt: 'Learn how EMI is calculated, what factors affect it, and how to use an EMI calculator to plan your loan repayment effectively.',
     date: '2024-04-20',
@@ -140,6 +153,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'loan-against-property-vs-personal-loan',
+    coverImage: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80",
     title: 'Loan Against Property vs Personal Loan: Which is Better?',
     excerpt: 'Confused between a Loan Against Property and a Personal Loan? We break down the key differences in interest rates, loan amounts, tenure, and eligibility to help you decide.',
     date: '2024-05-08',
@@ -180,6 +194,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'property-investment-mumbai-2024',
+    coverImage: "https://images.unsplash.com/photo-1529253355930-ddbe423a2ac7?w=800&q=80",
     title: 'Property Investment in Mumbai: Is 2024 the Right Time?',
     excerpt: 'Mumbai real estate is at a pivotal juncture in 2024. We analyse market trends, best localities to invest, and whether now is the right time to buy.',
     date: '2024-06-01',
@@ -217,6 +232,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'business-loan-tips-sme',
+    coverImage: "https://images.unsplash.com/photo-1664575602554-2087b04935a5?w=800&q=80",
     title: '5 Tips to Get a Business Loan for Your SME',
     excerpt: 'Getting a business loan as an SME can be challenging. These 5 practical tips will improve your eligibility and increase your chances of quick approval.',
     date: '2024-07-10',

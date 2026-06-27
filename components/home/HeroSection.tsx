@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import Button from '@/components/ui/Button';
 
 export default function HeroSection() {
@@ -71,6 +72,20 @@ export default function HeroSection() {
 
         {/* Right Column — Quick Eligibility Check */}
         <div className="hidden lg:block">
+          <div className="relative w-full h-56 rounded-2xl overflow-hidden mb-6 shadow-xl">
+            <Image
+              src="https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?w=800&q=80"
+              alt="Happy family with home keys"
+              fill
+              className="object-cover"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-blue-900/60 to-transparent" />
+            <div className="absolute bottom-4 left-4 text-white">
+              <p className="font-bold text-lg">Your Dream Home Awaits</p>
+              <p className="text-blue-200 text-sm">Quick approvals · Best rates</p>
+            </div>
+          </div>
           <div className="bg-white rounded-2xl shadow-2xl p-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-2">Quick Eligibility Check</h2>
             <p className="text-gray-500 text-sm mb-6">Find out if you qualify in seconds</p>

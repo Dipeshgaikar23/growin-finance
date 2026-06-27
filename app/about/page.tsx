@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Image from 'next/image';
 import Button from '@/components/ui/Button';
 
 export const metadata: Metadata = {
@@ -27,6 +28,14 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Left */}
             <div>
+              <div className="relative w-full h-64 rounded-2xl overflow-hidden mb-6 shadow-lg">
+                <Image
+                  src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80"
+                  alt="Team handshake - Growin Finserv"
+                  fill
+                  className="object-cover"
+                />
+              </div>
               <h2 className="text-3xl font-bold mb-6" style={{ color: '#1B3F8B' }}>Our Story</h2>
               <p className="text-gray-600 mb-4">
                 Growin Finserv was founded with a single mission: to make home loans and financial products accessible to every Mumbai family. We understand that buying a home is one of the most significant decisions in a person's life, and we are here to guide you every step of the way.

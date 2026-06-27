@@ -1,3 +1,5 @@
+'use client'
+
 import { Branch } from '@/lib/data/branches'
 
 interface BranchCardProps {

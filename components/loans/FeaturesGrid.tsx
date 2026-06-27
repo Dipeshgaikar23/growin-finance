@@ -1,3 +1,5 @@
+'use client'
+
 import { LoanFeature } from '@/lib/data/loans'
 
 interface FeaturesGridProps {
