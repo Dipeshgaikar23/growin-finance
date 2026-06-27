@@ -3,14 +3,25 @@ import { loans } from '@/lib/data/loans';
 
 export default function LoanTypesGrid() {
   return (
-    <section className="bg-gray-50 py-16 px-4">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+    <section
+      className="relative py-20 px-4 overflow-hidden"
+      style={{
+        backgroundImage: 'url(https://images.unsplash.com/photo-1579547621113-e4bb2a19bdd6?w=1920&q=80)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
+      {/* Very light overlay so it looks like a subtle texture */}
+      <div className="absolute inset-0 bg-gray-50" style={{ opacity: 0.95 }} />
+
+      <div className="relative z-10 max-w-7xl mx-auto">
+        <div className="text-center mb-14">
+          <span className="text-sm font-semibold text-orange-500 uppercase tracking-widest">What We Offer</span>
+          <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-3" style={{ color: '#1B3F8B' }}>
             Our Loan Products
           </h2>
           <p className="text-gray-500 text-lg max-w-xl mx-auto">
-            Tailored financial solutions for every need
+            Tailored financial solutions for every need — from your dream home to your growing business
           </p>
         </div>
 
@@ -18,22 +29,31 @@ export default function LoanTypesGrid() {
           {loans.map((loan) => (
             <div
               key={loan.id}
-              className="bg-white rounded-xl shadow p-6 border border-transparent hover:border-blue-500 hover:shadow-lg transition-all duration-200 flex flex-col"
+              className="bg-white rounded-2xl shadow-md p-7 border border-transparent hover:border-blue-500 hover:shadow-xl transition-all duration-300 flex flex-col group"
             >
-              <div className="text-4xl mb-4">{loan.icon}</div>
+              <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-200">{loan.icon}</div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">{loan.name}</h3>
               <div className="mb-3">
-                <span className="text-sm bg-blue-100 text-blue-700 rounded-full px-3 py-1 font-medium">
-                  From {loan.interestRate}% p.a.
+                <span
+                  className="text-sm rounded-full px-3 py-1 font-semibold"
+                  style={{ backgroundColor: '#EFF6FF', color: '#1B3F8B' }}
+                >
+                  From {loan.interestRate}
                 </span>
               </div>
-              <p className="text-gray-600 text-sm flex-1 mb-5">{loan.tagline}</p>
-              <Link
-                href={`/loans/${loan.slug}`}
-                className="text-blue-600 font-semibold text-sm hover:text-blue-800 transition-colors"
-              >
-                Know More →
-              </Link>
+              <p className="text-gray-500 text-sm flex-1 mb-5 leading-relaxed">{loan.tagline}</p>
+              <div className="flex items-center justify-between">
+                <Link
+                  href={`/loans/${loan.slug}`}
+                  className="font-semibold text-sm transition-colors duration-200 hover:underline"
+                  style={{ color: '#2563EB' }}
+                >
+                  Know More →
+                </Link>
+                <span className="text-xs text-gray-400 bg-gray-50 px-2 py-1 rounded-full">
+                  Up to {loan.maxAmount}
+                </span>
+              </div>
             </div>
           ))}
         </div>

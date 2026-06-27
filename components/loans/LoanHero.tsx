@@ -3,11 +3,11 @@ import Button from '@/components/ui/Button'
 import { LoanData } from '@/lib/data/loans'
 
 const loanImages: Record<string, string> = {
-  'home-loan': 'https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800&q=80',
-  'loan-against-property': 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80',
-  'personal-loan': 'https://images.unsplash.com/photo-1579621970588-a35d0e7ab9b6?w=800&q=80',
-  'business-loan': 'https://images.unsplash.com/photo-1664575602554-2087b04935a5?w=800&q=80',
-  'car-loan': 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&q=80',
+  'home-loan': 'https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1920&q=80',
+  'loan-against-property': 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80',
+  'personal-loan': 'https://images.unsplash.com/photo-1579621970588-a35d0e7ab9b6?w=1920&q=80',
+  'business-loan': 'https://images.unsplash.com/photo-1664575602554-2087b04935a5?w=1920&q=80',
+  'car-loan': 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1920&q=80',
 }
 
 interface LoanHeroProps {
@@ -15,12 +15,19 @@ interface LoanHeroProps {
 }
 
 export default function LoanHero({ loan }: LoanHeroProps) {
+  const bgImage = loanImages[loan.slug];
+
   return (
     <section
-      className="relative w-full py-20"
-      style={{ background: 'linear-gradient(135deg, #1B3F8B 0%, #2563EB 100%)' }}
+      className="relative w-full py-24 overflow-hidden"
+      style={bgImage ? {
+        backgroundImage: `url(${bgImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      } : { background: 'linear-gradient(135deg, #1B3F8B 0%, #2563EB 100%)' }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {bgImage && <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(27,63,139,0.92) 0%, rgba(37,99,235,0.85) 100%)' }} />}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb */}
         <nav className="mb-6">
           <ol className="flex items-center gap-2 text-sm text-blue-200">

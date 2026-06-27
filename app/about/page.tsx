@@ -11,11 +11,16 @@ export default function AboutPage() {
     <main>
       {/* Hero */}
       <section
-        className="py-20 text-white text-center"
-        style={{ background: 'linear-gradient(135deg, #1B3F8B 0%, #2a5cbf 100%)' }}
+        className="relative py-28 text-white text-center overflow-hidden"
+        style={{
+          backgroundImage: 'url(https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
       >
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">About Growin Finserv</h1>
+        <div className="absolute inset-0" style={{ backgroundColor: '#1B3F8B', opacity: 0.85 }} />
+        <div className="relative z-10 container mx-auto px-4">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4">About Growin Finserv</h1>
           <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
             Your trusted loan partner since 2016 — helping Mumbai families and businesses achieve their financial goals with transparency and care.
           </p>
