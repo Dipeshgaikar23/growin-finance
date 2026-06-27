@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import { Users, IndianRupee, CalendarCheck, Building2 } from 'lucide-react';
 import Button from '@/components/ui/Button';
 
 export default function HeroSection() {
@@ -53,16 +54,18 @@ export default function HeroSection() {
           {/* Trust Stats */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             {[
-              { icon: '😊', number: '1000+', label: 'Happy Customers' },
-              { icon: '💰', number: '₹50Cr+', label: 'Disbursed' },
-              { icon: '📅', number: '8+', label: 'Years Experience' },
-              { icon: '🏦', number: '15+', label: 'Bank Partners' },
+              { Icon: Users, number: '1000+', label: 'Happy Customers' },
+              { Icon: IndianRupee, number: '₹50Cr+', label: 'Disbursed' },
+              { Icon: CalendarCheck, number: '8+', label: 'Years Experience' },
+              { Icon: Building2, number: '15+', label: 'Bank Partners' },
             ].map((stat) => (
               <div
                 key={stat.label}
                 className="bg-white/10 border border-white/20 rounded-xl p-3 text-center"
               >
-                <div className="text-2xl mb-1">{stat.icon}</div>
+                <div className="flex justify-center mb-2">
+                  <stat.Icon size={22} className="text-orange-400" />
+                </div>
                 <div className="text-xl font-bold">{stat.number}</div>
                 <div className="text-xs text-blue-200">{stat.label}</div>
               </div>
