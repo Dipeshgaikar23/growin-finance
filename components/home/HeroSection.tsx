@@ -1,15 +1,31 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Users, IndianRupee, CalendarCheck, Building2 } from 'lucide-react';
 import Button from '@/components/ui/Button';
+
+const loanSlides = [
+  { slug: 'home-loan', label: 'Home Loan', caption: 'Your dream home awaits · Best rates', src: 'https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800&q=80' },
+  { slug: 'loan-against-property', label: 'Loan Against Property', caption: 'Unlock your property value · Any purpose', src: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80' },
+  { slug: 'personal-loan', label: 'Personal Loan', caption: 'Instant funds · No collateral needed', src: 'https://images.unsplash.com/photo-1579621970588-a35d0e7ab9b6?w=800&q=80' },
+  { slug: 'business-loan', label: 'Business Loan', caption: 'Fuel your growth · Fast approvals', src: 'https://images.unsplash.com/photo-1664575602554-2087b04935a5?w=800&q=80' },
+  { slug: 'car-loan', label: 'Car Loan', caption: 'Drive your dream car · Quick disbursal', src: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&q=80' },
+];
 
 export default function HeroSection() {
   const [income, setIncome] = useState('');
   const [loanAmount, setLoanAmount] = useState('');
   const [employmentType, setEmploymentType] = useState('Salaried');
   const [submitted, setSubmitted] = useState(false);
+  const [slideIndex, setSlideIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setSlideIndex((i) => (i + 1) % loanSlides.length);
+    }, 3500);
+    return () => clearInterval(timer);
+  }, []);
 
   function handleEligibilityCheck(e: React.FormEvent) {
     e.preventDefault();
@@ -87,17 +103,34 @@ export default function HeroSection() {
         {/* Right Column — Quick Eligibility Check */}
         <div className="hidden lg:block">
           <div className="relative w-full h-56 rounded-2xl overflow-hidden mb-6 shadow-xl">
-            <Image
-              src="https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?w=800&q=80"
-              alt="Happy family with home keys"
-              fill
-              className="object-cover"
-              priority
-            />
+            {loanSlides.map((slide, i) => (
+              <div
+                key={slide.slug}
+                className="absolute inset-0 transition-opacity duration-700"
+                style={{ opacity: i === slideIndex ? 1 : 0 }}
+              >
+                <Image
+                  src={slide.src}
+                  alt={slide.label}
+                  fill
+                  className="object-cover"
+                  priority={i === 0}
+                />
+              </div>
+            ))}
             <div className="absolute inset-0 bg-gradient-to-t from-blue-900/60 to-transparent" />
             <div className="absolute bottom-4 left-4 text-white">
-              <p className="font-bold text-lg">Your Dream Home Awaits</p>
-              <p className="text-blue-200 text-sm">Quick approvals · Best rates</p>
+              <p className="font-bold text-lg">{loanSlides[slideIndex].label}</p>
+              <p className="text-blue-200 text-sm">{loanSlides[slideIndex].caption}</p>
+            </div>
+            <div className="absolute bottom-3 right-4 flex gap-1.5">
+              {loanSlides.map((_, i) => (
+                <span
+                  key={i}
+                  className="block h-1.5 rounded-full transition-all duration-300"
+                  style={{ width: i === slideIndex ? 20 : 6, backgroundColor: i === slideIndex ? '#fff' : 'rgba(255,255,255,0.4)' }}
+                />
+              ))}
             </div>
           </div>
           <div className="bg-white rounded-2xl shadow-2xl p-8">

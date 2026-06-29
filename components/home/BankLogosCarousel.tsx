@@ -27,7 +27,7 @@ export default function BankLogosCarousel() {
           display: flex;
           flex-wrap: nowrap;
           /* 2000ms faster than 24s -> 22s */
-          animation: bankScroll 22s linear infinite;
+          animation: bankScroll 17s linear infinite;
         }
         .bank-track:hover {
           animation-play-state: paused;
