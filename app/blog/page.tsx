@@ -25,21 +25,25 @@ export default function BlogPage() {
   return (
     <main>
       {/* Hero */}
-      <section
-        className="py-16 text-white text-center"
-        style={{ background: 'linear-gradient(135deg, #1B3F8B 0%, #2a5cbf 100%)' }}
-      >
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Financial Insights &amp; Tips</h1>
-          <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-            Expert advice on home loans, personal finance, EMI planning, and more — written by the Growin Finserv team.
-          </p>
+      <section className="pt-6 pb-8 md:pt-10 md:pb-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div
+            className="py-16 text-white text-center rounded-[2rem] shadow-xl overflow-hidden"
+            style={{ background: 'linear-gradient(135deg, #1B3F8B 0%, #2a5cbf 100%)' }}
+          >
+            <div className="px-4 md:px-8">
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">Financial Insights &amp; Tips</h1>
+              <p className="text-xl text-blue-100 max-w-2xl mx-auto leading-relaxed">
+                Expert advice on home loans, personal finance, EMI planning, and more — written by the Growin Finserv team.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Blog Grid */}
       <section className="bg-white py-12">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {blogPosts.length === 0 ? (
             <div className="text-center py-20 text-gray-500">
               <p className="text-xl">No blog posts yet. Check back soon!</p>

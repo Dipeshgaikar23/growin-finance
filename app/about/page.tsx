@@ -10,26 +10,30 @@ export default function AboutPage() {
   return (
     <main>
       {/* Hero */}
-      <section
-        className="relative py-28 text-white text-center overflow-hidden"
-        style={{
-          backgroundImage: 'url(https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className="absolute inset-0" style={{ backgroundColor: '#1B3F8B', opacity: 0.85 }} />
-        <div className="relative z-10 container mx-auto px-4">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">About Growin Finserv</h1>
-          <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-            Your trusted loan partner since 2016 — helping Mumbai families and businesses achieve their financial goals with transparency and care.
-          </p>
+      <section className="pt-6 pb-8 md:pt-10 md:pb-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div
+            className="relative py-24 md:py-32 text-white text-center overflow-hidden rounded-[2rem] shadow-xl"
+            style={{
+              backgroundImage: 'url(https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          >
+            <div className="absolute inset-0" style={{ backgroundColor: '#1B3F8B', opacity: 0.85 }} />
+            <div className="relative z-10 px-4 md:px-8">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">About Growin Finserv</h1>
+              <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
+                Your trusted loan partner since 2016 — helping Mumbai families and businesses achieve their financial goals with transparency and care.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Our Story */}
       <section className="bg-white py-16">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Left */}
             <div>

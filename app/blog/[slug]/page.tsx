@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import { blogPosts, getPostBySlug } from '@/lib/data/blog';
 
 interface PageProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export function generateStaticParams() {
@@ -12,7 +12,8 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const post = getPostBySlug(params.slug);
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
   return {
     title: post ? `${post.title} | Growin Finserv` : 'Blog | Growin Finserv',
   };
@@ -32,8 +33,9 @@ function getCategoryColor(category: string): string {
   return categoryColors[category] ?? 'bg-gray-100 text-gray-700';
 }
 
-export default function BlogPostPage({ params }: PageProps) {
-  const post = getPostBySlug(params.slug);
+export default async function BlogPostPage({ params }: PageProps) {
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
 
   if (!post) {
     notFound();
