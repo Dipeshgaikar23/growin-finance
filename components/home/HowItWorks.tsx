@@ -1,3 +1,4 @@
+import React from 'react';
 import { FileText, ScanSearch, Banknote, ArrowRight } from 'lucide-react';
 import Button from '@/components/ui/Button';
 
@@ -43,12 +44,12 @@ export default function HowItWorks() {
           <p className="text-gray-500 text-lg">Get your loan approved in three simple steps</p>
         </div>
 
-        <div className="flex flex-col md:flex-row items-stretch justify-center gap-4 mb-14">
+        <div className="flex flex-col md:flex-row items-stretch justify-center gap-4 lg:gap-6 mb-14">
           {steps.map((step, index) => (
-            <div key={step.number} className="flex flex-row md:flex-col items-center flex-1 gap-4 md:gap-0">
+            <React.Fragment key={step.number}>
               <div className="flex-1 bg-white rounded-2xl shadow-lg border border-blue-50 p-8 text-center hover:shadow-xl transition-shadow duration-200 flex flex-col items-center w-full">
                 <div
-                  className="w-16 h-16 rounded-2xl flex items-center justify-center mb-4 shadow-md"
+                  className="w-16 h-16 rounded-2xl flex items-center justify-center mb-4 shadow-md shrink-0"
                   style={{ backgroundColor: '#1B3F8B' }}
                 >
                   <step.Icon size={28} className="text-white" />
@@ -64,11 +65,11 @@ export default function HowItWorks() {
               </div>
 
               {index < steps.length - 1 && (
-                <div className="hidden md:flex items-center justify-center self-center px-2">
+                <div className="hidden md:flex items-center justify-center shrink-0">
                   <ArrowRight size={28} style={{ color: '#F97316' }} />
                 </div>
               )}
-            </div>
+            </React.Fragment>
           ))}
         </div>
 
