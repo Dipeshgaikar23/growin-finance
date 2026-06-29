@@ -10,10 +10,10 @@ export default function AboutPage() {
   return (
     <main>
       {/* Hero */}
-      <section className="pt-6 pb-8 md:pt-10 md:pb-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className=" pb-8 md:pb-12">
+        <div className="w-full">
           <div
-            className="relative py-24 md:py-32 text-white text-center overflow-hidden rounded-[2rem] shadow-xl"
+            className="relative py-24 md:py-32 text-white text-center overflow-hidden shadow-xl"
             style={{
               backgroundImage: 'url(https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80)',
               backgroundSize: 'cover',

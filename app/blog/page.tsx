@@ -25,10 +25,10 @@ export default function BlogPage() {
   return (
     <main>
       {/* Hero */}
-      <section className="pt-6 pb-8 md:pt-10 md:pb-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="pb-8 md:pb-12">
+        <div className="w-full">
           <div
-            className="py-16 text-white text-center rounded-[2rem] shadow-xl overflow-hidden"
+            className="py-16 text-white text-center shadow-xl overflow-hidden"
             style={{ background: 'linear-gradient(135deg, #1B3F8B 0%, #2a5cbf 100%)' }}
           >
             <div className="px-4 md:px-8">
