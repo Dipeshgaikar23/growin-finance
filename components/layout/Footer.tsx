@@ -12,15 +12,16 @@ export default function Footer() {
           {/* Column 1: Company Info */}
           <div>
             <div className="mb-4">
-              <Link href="/" className="inline-block bg-white p-2 rounded-md">
-                <Image
-                  src="/logo.png"
-                  alt="Growin Finserv Logo"
-                  width={240}
-                  height={60}
-                  className="h-14 sm:h-16 w-auto object-contain"
-                />
-              </Link>
+              <Link href="/" className="flex items-center flex-shrink-0">
+            <Image
+              src="/logo.png"
+              alt="Growin Finserv Logo"
+              width={240}
+              height={60}
+              className="h-14 sm:h-54 w-auto object-contain"
+              priority
+            />
+          </Link>
             </div>
             <p className="text-gray-300 text-sm mb-5 leading-relaxed">
               Your Trusted Financial Partner in Mumbai
@@ -163,7 +164,7 @@ export default function Footer() {
             © 2024 Growin Finserv. All Rights Reserved.
           </p>
           <p className="text-gray-400 text-sm text-center sm:text-right">
-            Designed with ❤️ in Mumbai
+            Designed with echo & web
           </p>
         </div>
       </div>
