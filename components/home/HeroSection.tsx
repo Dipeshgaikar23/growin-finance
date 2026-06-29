@@ -65,10 +65,10 @@ export default function HeroSection() {
           {/* Trust Stats */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             {[
-              { Icon: Users, number: '1000+', label: 'Happy Customers' },
-              { Icon: IndianRupee, number: '₹50Cr+', label: 'Disbursed' },
+              { Icon: Users, number: '2000+', label: 'Happy Customers' },
+              { Icon: IndianRupee, number: '₹300Cr+', label: 'Disbursed' },
               { Icon: CalendarCheck, number: '8+', label: 'Years Experience' },
-              { Icon: Building2, number: '15+', label: 'Bank Partners' },
+              { Icon: Building2, number: '15+', label: 'Bank and NBFCs' },
             ].map((stat) => (
               <div
                 key={stat.label}

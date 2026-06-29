@@ -37,10 +37,10 @@ export default function Footer() {
               </p>
               <p>
                 <a
-                  href="mailto:growinfinserv550@gmail.com"
-                  className="hover:text-orange-400 transition-colors duration-150 break-all"
+                  href="mailto:info@growinfinserv.com"
+                  className="hover:text-white transition-colors break-all"
                 >
-                  growinfinserv550@gmail.com
+                  info@growinfinserv.com
                 </a>
               </p>
             </div>

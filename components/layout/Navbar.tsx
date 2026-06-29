@@ -8,6 +8,7 @@ const loanLinks = [
   { label: 'Loan Against Property', href: '/loans/loan-against-property' },
   { label: 'Personal Loan', href: '/loans/personal-loan' },
   { label: 'Business Loan', href: '/loans/business-loan' },
+  { label: 'Working Capital Loan', href: '/loans/working-capital' },
   { label: 'Car Loan', href: '/loans/car-loan' },
 ];
 
@@ -141,6 +142,9 @@ export default function Navbar() {
             <Link href="/blog" className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-150 ${isActive('/blog')}`}>
               Blog
             </Link>
+            <Link href="/careers" className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-150 ${isActive('/careers')}`}>
+              Careers
+            </Link>
             <Link href="/contact" className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-150 ${isActive('/contact')}`}>
               Contact
             </Link>
@@ -267,6 +271,13 @@ export default function Navbar() {
             className={`block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-150 ${isActiveMobile('/blog')}`}
           >
             Blog
+          </Link>
+          <Link
+            href="/careers"
+            onClick={() => setMobileOpen(false)}
+            className={`block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-150 ${isActiveMobile('/careers')}`}
+          >
+            Careers
           </Link>
           <Link
             href="/contact"

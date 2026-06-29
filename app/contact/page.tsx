@@ -32,6 +32,14 @@ export default function ContactPage() {
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setSubmitted(true);
+    const text = `Hi, I have a query from the contact form:
+Name: ${form.fullName}
+Phone: ${form.phone}
+Email: ${form.email}
+Subject: ${form.subject || 'N/A'}
+Message: ${form.message}`;
+    const encodedText = encodeURIComponent(text);
+    window.open(`https://wa.me/919769603074?text=${encodedText}`, '_blank');
   }
 
   return (
@@ -232,10 +240,10 @@ export default function ContactPage() {
                   <div>
                     <p className="font-semibold text-gray-800 mb-0.5">Email</p>
                     <a
-                      href="mailto:growinfinserv550@gmail.com"
+                      href="mailto:info@growinfinserv.com"
                       className="text-blue-600 hover:text-blue-800 break-all"
                     >
-                      growinfinserv550@gmail.com
+                      info@growinfinserv.com
                     </a>
                   </div>
                 </div>
@@ -252,7 +260,7 @@ export default function ContactPage() {
 
                 {/* WhatsApp */}
                 <a
-                  href="https://wa.me/919769603074"
+                  href="https://wa.me/918766507422"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-3 bg-green-500 hover:bg-green-600 text-white font-bold py-3.5 px-6 rounded-xl transition-colors w-full text-base"

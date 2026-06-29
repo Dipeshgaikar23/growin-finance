@@ -43,13 +43,13 @@ export default function AboutPage() {
               </div>
               <h2 className="text-3xl font-bold mb-6" style={{ color: '#1B3F8B' }}>Our Story</h2>
               <p className="text-gray-600 mb-4">
-                Growin Finserv was founded with a single mission: to make home loans and financial products accessible to every Mumbai family. We understand that buying a home is one of the most significant decisions in a person's life, and we are here to guide you every step of the way.
+                Growin Finserv was established with a singular mission: to make home loans and financial products accessible and transparent for every family in Mumbai. We understand that securing financing is one of life's most significant decisions, and we are committed to guiding you every step of the way.
               </p>
               <p className="text-gray-600 mb-4">
-                Founded by Gopal Pandey and Shivdhar Tiwari, two finance professionals with 15+ years of combined experience, Growin Finserv has grown into a trusted name in Mumbai's mortgage and loan landscape. Our founders saw a gap — borrowers were confused, underserved, and often paying more than they needed to. They built Growin Finserv to change that.
+                Founded by Gopal Pandey and Shivdhar Tiwari, two seasoned finance professionals with over 15 years of combined experience, Growin Finserv has emerged as a trusted name in Mumbai's mortgage and loan landscape. Identifying a gap where borrowers were often confused, underserved, and overpaying, they built this firm to simplify the lending process and prioritize client needs.
               </p>
               <p className="text-gray-600">
-                Since 2016, we have helped over 1,000 families and businesses secure financing — from first-time homebuyers to seasoned investors. Our team works with 15+ leading banks and NBFCs to find you the best rates, fastest approvals, and smoothest experience possible.
+                Since 2016, we have empowered over 2,000 families and businesses to secure optimal financing—from first-time homebuyers to expanding enterprises. Our dedicated team partners with 15+ leading Banks and NBFCs to negotiate the best rates, ensure rapid approvals, and deliver a seamless borrowing experience.
               </p>
             </div>
             {/* Right: Stats Card */}
@@ -60,11 +60,11 @@ export default function AboutPage() {
               <h3 className="text-2xl font-bold mb-8 text-center">Our Numbers</h3>
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
-                  <div className="text-4xl font-extrabold text-orange-400 mb-2">1000+</div>
+                  <div className="text-4xl font-extrabold text-orange-400 mb-2">2000+</div>
                   <div className="text-blue-100 text-sm">Happy Customers</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-extrabold text-orange-400 mb-2">₹50Cr+</div>
+                  <div className="text-4xl font-extrabold text-orange-400 mb-2">₹300Cr+</div>
                   <div className="text-blue-100 text-sm">Loan Disbursed</div>
                 </div>
                 <div className="text-center">
@@ -73,7 +73,7 @@ export default function AboutPage() {
                 </div>
                 <div className="text-center">
                   <div className="text-4xl font-extrabold text-orange-400 mb-2">15+</div>
-                  <div className="text-blue-100 text-sm">Bank Partners</div>
+                  <div className="text-blue-100 text-sm">Bank and NBFCs</div>
                 </div>
               </div>
             </div>
@@ -81,11 +81,11 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Meet Our Founders */}
+      {/* Meet Our Partners */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12" style={{ color: '#1B3F8B' }}>
-            Meet Our Founders
+            Meet Our Partners
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* Gopal Pandey */}
@@ -97,7 +97,7 @@ export default function AboutPage() {
                 G
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-1">Gopal Pandey</h3>
-              <p className="text-orange-500 font-semibold mb-3">Co-Founder &amp; CEO</p>
+              <p className="text-orange-500 font-semibold mb-3">Co-Founder &amp; Partner</p>
               <p className="text-gray-600 text-sm mb-4">
                 10+ years of expertise in mortgage advisory and home loans. Gopal has helped hundreds of families navigate the complexities of property financing with personalised guidance and deep lender relationships.
               </p>
@@ -117,7 +117,7 @@ export default function AboutPage() {
                 S
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-1">Shivdhar Tiwari</h3>
-              <p className="text-orange-500 font-semibold mb-3">Co-Founder &amp; Director</p>
+              <p className="text-orange-500 font-semibold mb-3">Co-Founder &amp; Partner</p>
               <p className="text-gray-600 text-sm mb-4">
                 8+ years of experience in business and personal loan solutions. Shivdhar specialises in structuring loan products for entrepreneurs and self-employed professionals, ensuring fast approvals and competitive rates.
               </p>

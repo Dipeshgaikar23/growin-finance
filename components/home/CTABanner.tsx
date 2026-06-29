@@ -23,7 +23,7 @@ export default function CTABanner() {
           Ready to Get Your Loan?
         </h2>
         <p className="text-blue-200 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
-          Join 1000+ satisfied customers across Mumbai. Apply now and get approval in just 48 hours.
+          Join 2000+ Happy Customers across Mumbai. Apply now and get approval in just 48 hours.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Button href="/contact" variant="secondary" size="lg">

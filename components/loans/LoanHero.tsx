@@ -85,7 +85,7 @@ export default function LoanHero({ loan }: LoanHeroProps) {
               <h3 className="text-lg font-bold text-gray-800 mb-6 text-center">Loan at a Glance</h3>
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center p-4 bg-blue-50 rounded-xl">
-                  <p className="text-sm text-gray-500 mb-1">Interest Rate</p>
+                  <p className="text-sm text-gray-500 mb-1">Rate of Interest</p>
                   <p className="text-2xl font-bold text-blue-600">{loan.interestRate}</p>
                 </div>
                 <div className="text-center p-4 bg-blue-50 rounded-xl">

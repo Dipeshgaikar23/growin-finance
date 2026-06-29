@@ -26,15 +26,39 @@ export default function BankLogosCarousel() {
         .bank-track {
           display: flex;
           flex-wrap: nowrap;
-          animation: bankScroll 24s linear infinite;
+          /* 2000ms faster than 24s -> 22s */
+          animation: bankScroll 22s linear infinite;
         }
         .bank-track:hover {
           animation-play-state: paused;
         }
+        .bank-item {
+          flex-shrink: 0;
+          width: 90px;
+          height: 50px;
+          margin-left: 8px;
+          margin-right: 8px;
+        }
+        @media (min-width: 640px) {
+          .bank-item {
+            width: 140px;
+            height: 60px;
+            margin-left: 12px;
+            margin-right: 12px;
+          }
+        }
+        @media (min-width: 768px) {
+          .bank-item {
+            width: 180px;
+            height: 80px;
+            margin-left: 16px;
+            margin-right: 16px;
+          }
+        }
       `}</style>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6">
-        <p className="text-center text-gray-700 text-lg font-semibold">
+        <p className="text-center text-gray-700 text-sm sm:text-lg font-semibold">
           <span style={{ color: '#1B3F8B' }} className="font-bold">&lsquo;Partnered</span>{' '}
           with the <strong>best.</strong> To <strong>serve</strong> you the{' '}
           <strong style={{ color: '#1B3F8B' }}>best&rsquo;.</strong>
@@ -46,7 +70,7 @@ export default function BankLogosCarousel() {
           {doubled.map((bank, i) => (
             <div
               key={`${bank.slug}-${i}`}
-              style={{ flexShrink: 0, width: 180, height: 80, marginLeft: 16, marginRight: 16 }}
+              className="bank-item"
             >
               <Image
                 src={`/banks/${bank.slug}.jpg`}

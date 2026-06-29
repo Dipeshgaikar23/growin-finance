@@ -46,7 +46,7 @@ export default function MiniEMICalculator() {
           {/* Interest Rate */}
           <div>
             <div className="flex justify-between items-center mb-2">
-              <label className="text-sm font-medium text-gray-700">Interest Rate</label>
+              <label className="text-sm font-medium text-gray-700">Rate of Interest</label>
               <span className="text-sm font-bold text-blue-600">{interestRate.toFixed(1)}% p.a.</span>
             </div>
             <input

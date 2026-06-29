@@ -50,7 +50,7 @@ export default function LoanEMISection({
                   step={50000}
                   value={amount}
                   onChange={e => setAmount(Number(e.target.value))}
-                  className="w-full h-2 rounded-full appearance-none cursor-pointer accent-blue-600"
+                  className="w-full h-2 rounded-full appearance-none bg-gray-200 cursor-pointer accent-blue-600"
                 />
                 <div className="flex justify-between text-xs text-gray-400 mt-1">
                   <span>{formatCurrency(defaultAmount * 0.1)}</span>
@@ -61,7 +61,7 @@ export default function LoanEMISection({
               {/* Interest Rate */}
               <div>
                 <div className="flex justify-between items-center mb-3">
-                  <label className="text-sm font-semibold text-gray-700">Interest Rate (p.a.)</label>
+                  <label className="text-sm font-semibold text-gray-700">Rate of Interest (p.a.)</label>
                   <span className="text-blue-600 font-bold text-lg">{rate.toFixed(1)}%</span>
                 </div>
                 <input
@@ -71,7 +71,7 @@ export default function LoanEMISection({
                   step={0.1}
                   value={rate}
                   onChange={e => setRate(Number(e.target.value))}
-                  className="w-full h-2 rounded-full appearance-none cursor-pointer accent-blue-600"
+                  className="w-full h-2 rounded-full appearance-none bg-gray-200 cursor-pointer accent-blue-600"
                 />
                 <div className="flex justify-between text-xs text-gray-400 mt-1">
                   <span>6%</span>
@@ -92,7 +92,7 @@ export default function LoanEMISection({
                   step={6}
                   value={tenure}
                   onChange={e => setTenure(Number(e.target.value))}
-                  className="w-full h-2 rounded-full appearance-none cursor-pointer accent-blue-600"
+                  className="w-full h-2 rounded-full appearance-none bg-gray-200 cursor-pointer accent-blue-600"
                 />
                 <div className="flex justify-between text-xs text-gray-400 mt-1">
                   <span>12 mo</span>

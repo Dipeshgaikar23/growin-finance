@@ -156,8 +156,8 @@ export default function BlogPostPage({ params }: PageProps) {
                 </div>
                 <div className="flex items-start gap-2">
                   <span>✉️</span>
-                  <a href="mailto:growinfinserv550@gmail.com" className="text-blue-600 hover:text-blue-800 break-all">
-                    growinfinserv550@gmail.com
+                  <a href="mailto:info@growinfinserv.com" className="text-blue-600 hover:text-blue-800 break-all">
+                    info@growinfinserv.com
                   </a>
                 </div>
                 <div className="flex items-start gap-2">
@@ -166,7 +166,7 @@ export default function BlogPostPage({ params }: PageProps) {
                 </div>
               </div>
               <a
-                href="https://wa.me/919769603074"
+                href="https://wa.me/918766507422"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-4 block w-full text-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2.5 px-4 rounded-lg transition-colors"

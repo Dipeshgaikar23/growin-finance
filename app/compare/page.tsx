@@ -56,7 +56,7 @@ export default function ComparePage() {
 
   const rows = [
     {
-      label: 'Interest Rate',
+      label: 'Rate of Interest',
       val1: loan1.interestRate,
       val2: loan2.interestRate,
       color1: rateColor(rate1, rate2, true),

@@ -6,7 +6,7 @@ export default function WhatsAppButton() {
 
   return (
     <a
-      href="https://wa.me/919769603074?text=Hi%2C%20I%20am%20interested%20in%20a%20loan%20from%20Growin%20Finserv"
+      href="https://wa.me/918766507422?text=Hi%2C%20I%20am%20interested%20in%20a%20loan%20from%20Growin%20Finserv"
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-50 flex items-center gap-2 animate-bounce"

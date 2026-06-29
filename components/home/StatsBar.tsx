@@ -12,10 +12,10 @@ interface Stat {
 }
 
 const stats: Stat[] = [
-  { target: 1000, prefix: '', suffix: '+', label: 'Satisfied Customers', Icon: Users },
-  { target: 50, prefix: '₹', suffix: ' Cr+', label: 'Loans Disbursed', Icon: IndianRupee },
+  { target: 2000, prefix: '', suffix: '+', label: 'Happy Customers', Icon: Users },
+  { target: 300, prefix: '₹', suffix: ' Cr+', label: 'Loans Disbursed', Icon: IndianRupee },
   { target: 8, prefix: '', suffix: '+', label: 'Years Of Excellence', Icon: Award },
-  { target: 15, prefix: '', suffix: '+', label: 'Bank Partners', Icon: Building2 },
+  { target: 15, prefix: '', suffix: '+', label: 'Bank and NBFCs', Icon: Building2 },
 ];
 
 function AnimatedCounter({ target, duration = 1500 }: { target: number; duration?: number }) {

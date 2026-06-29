@@ -68,7 +68,7 @@ export default function EMICalculatorFull() {
                 step={50000}
                 value={amount}
                 onChange={e => handleAmountChange(Number(e.target.value))}
-                className="w-full h-2 rounded-full appearance-none cursor-pointer accent-blue-600"
+                className="w-full h-2 rounded-full appearance-none bg-gray-200 cursor-pointer accent-blue-600"
               />
               <div className="flex justify-between text-xs text-gray-400 mt-1">
                 <span>₹1,00,000</span>
@@ -79,7 +79,7 @@ export default function EMICalculatorFull() {
             {/* Interest Rate */}
             <div>
               <div className="flex justify-between items-center mb-2">
-                <label className="text-sm font-semibold text-gray-700">Interest Rate (% p.a.)</label>
+                <label className="text-sm font-semibold text-gray-700">Rate of Interest (% p.a.)</label>
                 <input
                   type="number"
                   value={rateInput}
@@ -99,7 +99,7 @@ export default function EMICalculatorFull() {
                 step={0.1}
                 value={rate}
                 onChange={e => handleRateChange(Number(e.target.value))}
-                className="w-full h-2 rounded-full appearance-none cursor-pointer accent-blue-600"
+                className="w-full h-2 rounded-full appearance-none bg-gray-200 cursor-pointer accent-blue-600"
               />
               <div className="flex justify-between text-xs text-gray-400 mt-1">
                 <span>6%</span>
@@ -130,7 +130,7 @@ export default function EMICalculatorFull() {
                 step={6}
                 value={tenure}
                 onChange={e => handleTenureChange(Number(e.target.value))}
-                className="w-full h-2 rounded-full appearance-none cursor-pointer accent-blue-600"
+                className="w-full h-2 rounded-full appearance-none bg-gray-200 cursor-pointer accent-blue-600"
               />
               <div className="flex justify-between text-xs text-gray-400 mt-1">
                 <span>12 mo</span>
