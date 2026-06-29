@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
 const loanLinks = [
@@ -35,13 +36,17 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 bg-white shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center flex-shrink-0">
-            <span className="text-2xl font-extrabold text-navy-900" style={{ color: '#1a2b4a' }}>
-              Growin
-            </span>
-            <span className="text-2xl font-extrabold text-blue-600">Finserv</span>
+            <Image
+              src="/logo.png"
+              alt="Growin Finserv Logo"
+              width={240}
+              height={60}
+              className="h-14 sm:h-16 w-auto object-contain"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}

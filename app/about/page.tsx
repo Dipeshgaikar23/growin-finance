@@ -82,51 +82,71 @@ export default function AboutPage() {
       </section>
 
       {/* Meet Our Partners */}
-      <section className="bg-gray-50 py-16">
+      <section className="bg-gray-50 py-16 md:py-24">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12" style={{ color: '#1B3F8B' }}>
-            Meet Our Partners
+          <h2 className="text-4xl font-bold text-center mb-16" style={{ color: '#1B3F8B' }}>
+            Meet Our Founders
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          
+          <div className="max-w-6xl mx-auto space-y-16">
             {/* Gopal Pandey */}
-            <div className="bg-white rounded-2xl shadow-md p-8 text-center hover:shadow-lg transition-shadow">
-              <div
-                className="w-20 h-20 rounded-full flex items-center justify-center text-white text-3xl font-bold mx-auto mb-4"
-                style={{ backgroundColor: '#1B3F8B' }}
-              >
-                G
+            <div className="flex flex-col md:flex-row gap-8 bg-white rounded-[2rem] shadow-xl overflow-hidden border border-gray-100">
+              <div className="relative w-full md:w-2/5 h-[400px] md:h-[550px]">
+                <Image
+                  src="/gopal-pandey.jpg"
+                  alt="Gopal Pandey"
+                  fill
+                  className="object-cover object-top"
+                />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-1">Gopal Pandey</h3>
-              <p className="text-orange-500 font-semibold mb-3">Co-Founder &amp; Partner</p>
-              <p className="text-gray-600 text-sm mb-4">
-                10+ years of expertise in mortgage advisory and home loans. Gopal has helped hundreds of families navigate the complexities of property financing with personalised guidance and deep lender relationships.
-              </p>
-              <a
-                href="tel:9769603074"
-                className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium"
-              >
-                📞 9769603074
-              </a>
+              <div className="w-full md:w-3/5 p-8 md:p-14 flex flex-col justify-center">
+                <div className="inline-block px-4 py-1.5 rounded-full bg-orange-100 text-orange-600 font-bold text-xs tracking-wider mb-6 self-start uppercase">
+                  Co-Founder &amp; Partner
+                </div>
+                <h3 className="text-4xl font-extrabold text-gray-900 mb-6">Gopal Pandey</h3>
+                <p className="text-gray-600 text-lg md:text-xl leading-relaxed mb-8">
+                  10+ years of expertise in mortgage advisory and home loans. Gopal has helped hundreds of families navigate the complexities of property financing with personalised guidance and deep lender relationships.
+                </p>
+                <div className="mt-auto">
+                  <p className="text-sm font-semibold text-gray-400 mb-2 uppercase tracking-wide">Get in Touch</p>
+                  <a
+                    href="tel:9769603074"
+                    className="inline-flex items-center gap-3 text-2xl font-bold text-blue-700 hover:text-orange-500 transition-colors"
+                  >
+                    <span>📞</span> 9769603074
+                  </a>
+                </div>
+              </div>
             </div>
+
             {/* Shivdhar Tiwari */}
-            <div className="bg-white rounded-2xl shadow-md p-8 text-center hover:shadow-lg transition-shadow">
-              <div
-                className="w-20 h-20 rounded-full flex items-center justify-center text-white text-3xl font-bold mx-auto mb-4"
-                style={{ backgroundColor: '#1B3F8B' }}
-              >
-                S
+            <div className="flex flex-col md:flex-row-reverse gap-8 bg-white rounded-[2rem] shadow-xl overflow-hidden border border-gray-100">
+              <div className="relative w-full md:w-2/5 h-[400px] md:h-[550px]">
+                <Image
+                  src="/shivdhar-tiwari.jpg"
+                  alt="Shivdhar Tiwari"
+                  fill
+                  className="object-cover object-top"
+                />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-1">Shivdhar Tiwari</h3>
-              <p className="text-orange-500 font-semibold mb-3">Co-Founder &amp; Partner</p>
-              <p className="text-gray-600 text-sm mb-4">
-                8+ years of experience in business and personal loan solutions. Shivdhar specialises in structuring loan products for entrepreneurs and self-employed professionals, ensuring fast approvals and competitive rates.
-              </p>
-              <a
-                href="tel:8766507422"
-                className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium"
-              >
-                📞 8766507422
-              </a>
+              <div className="w-full md:w-3/5 p-8 md:p-14 flex flex-col justify-center">
+                <div className="inline-block px-4 py-1.5 rounded-full bg-orange-100 text-orange-600 font-bold text-xs tracking-wider mb-6 self-start uppercase">
+                  Co-Founder &amp; Partner
+                </div>
+                <h3 className="text-4xl font-extrabold text-gray-900 mb-6">Shivdhar Tiwari</h3>
+                <p className="text-gray-600 text-lg md:text-xl leading-relaxed mb-8">
+                  8+ years of experience in business and personal loan solutions. Shivdhar specialises in structuring loan products for entrepreneurs and self-employed professionals, ensuring fast approvals and competitive rates.
+                </p>
+                <div className="mt-auto">
+                  <p className="text-sm font-semibold text-gray-400 mb-2 uppercase tracking-wide">Get in Touch</p>
+                  <a
+                    href="tel:8766507422"
+                    className="inline-flex items-center gap-3 text-2xl font-bold text-blue-700 hover:text-orange-500 transition-colors"
+                  >
+                    <span>📞</span> 8766507422
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
