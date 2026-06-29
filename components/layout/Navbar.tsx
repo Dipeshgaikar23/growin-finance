@@ -40,11 +40,11 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center flex-shrink-0">
             <Image
-              src="/logo.png"
+              src="/logo_cropped.png"
               alt="Growin Finserv Logo"
               width={240}
               height={60}
-              className="h-14 sm:h-54 w-auto object-contain"
+              className="h-9 sm:h-11 w-auto object-contain"
               priority
             />
           </Link>
