@@ -1,3 +1,5 @@
+import { FileText } from 'lucide-react';
+
 interface DocChecklistProps {
   documents: {
     category: string
@@ -25,7 +27,7 @@ export default function DocChecklist({ documents }: DocChecklistProps) {
               <ul className="space-y-2.5">
                 {doc.items.map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <span className="text-lg shrink-0 mt-0.5">📄</span>
+                    <FileText size={16} className="shrink-0 mt-0.5 text-blue-500" />
                     <span className="text-gray-700 text-sm leading-relaxed">{item}</span>
                   </li>
                 ))}

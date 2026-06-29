@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { CheckCircle2 } from 'lucide-react';
 
 interface Result {
   type: 'success' | 'warning' | 'info';
@@ -33,7 +34,7 @@ export default function EligibilityChecker() {
     } else if (loanNum <= incomeNum * 60) {
       setResult({
         type: 'success',
-        msg: '🎉 Great news! You are likely eligible. Our team will contact you.',
+        msg: 'Great news! You are likely eligible. Our team will contact you.',
       });
     } else {
       setResult({

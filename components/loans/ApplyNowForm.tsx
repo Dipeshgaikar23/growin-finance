@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, FormEvent } from 'react'
+import { CheckCircle2, Phone } from 'lucide-react'
 
 interface ApplyNowFormProps {
   loanName: string

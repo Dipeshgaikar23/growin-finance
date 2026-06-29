@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { Users, IndianRupee, CalendarCheck, Building2 } from 'lucide-react';
+import { Users, IndianRupee, CalendarCheck, Building2, Trophy, CheckCircle2 } from 'lucide-react';
 import Button from '@/components/ui/Button';
 
 const loanSlides = [
@@ -52,13 +52,13 @@ export default function HeroSection() {
         {/* Left Column */}
         <div className="text-white">
           <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-2 text-sm font-medium mb-6">
-            🏆 Mumbai&apos;s Trusted Loan Partner
+            Mumbai&apos;s Trusted Loan Partner
           </div>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-            Get Your Dream Loan
+            Growing your Dreams,
             <br />
-            <span className="text-orange-500">Approved in 48 Hours</span>
+            <span className="text-orange-500">Financing your Future</span>
           </h1>
 
           <p className="text-lg text-blue-100 mb-8 max-w-lg">

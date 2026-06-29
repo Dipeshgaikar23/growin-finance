@@ -44,7 +44,7 @@ export default function Navbar() {
               alt="Growin Finserv Logo"
               width={240}
               height={60}
-              className="h-14 sm:h-16 w-auto object-contain"
+              className="h-14 sm:h-54 w-auto object-contain"
               priority
             />
           </Link>
